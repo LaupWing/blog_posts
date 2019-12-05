@@ -6,11 +6,11 @@ import {GlobalDispatchContext,GlobalStateContext} from '../context/GlobalContext
 const Header = ({ siteTitle }) => {
     const dispatch = useContext(GlobalDispatchContext)
     const state = useContext(GlobalStateContext)
-
+    
     return (
         <header
             style={{
-            background: `var(--pinkish-color)`,
+            background: `var(--icecream-pinkish)`,
             marginBottom: `1.45rem`,
             }}
         >
