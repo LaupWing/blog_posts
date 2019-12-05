@@ -2,10 +2,18 @@
 
 :root{
     --header-font: 'Poiret One', cursive;
-    --pinkish-color: #ff92a9;
-    --yellowish-color: #fed361;
-    --skintone-color: #f9ece6;
-    --justwhite-color: #ffff;
+    --icecream-pinkish: #ff92a9;
+    --iceream-yellowish: #fed361;
+    --icecream-skintone: #f9ece6;
+    --icecream-white: #ffff;
+    --beer-darkOrange: #f7a538;
+    --beer-lightOrange: #fcc07e;
+    --beer-dirtWhite: #fcf1d8;
+    --beer-dirtBrown: #e3c9a9;
+    --macha-darkGreen: #434738;
+    --macha-brightGreen: #b5d43c;
+    --macha-lightGreen: #d9ef81;
+    --macha-white: #f7f7f7;
 }
 html {
     font-family: sans-serif;
