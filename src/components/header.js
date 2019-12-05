@@ -33,7 +33,9 @@ const Header = ({ siteTitle }) => {
                 </Link>
             </h1>
             {state.theme}
-            <button onClick={()=>dispatch({type: 'CHANGE_THEME'})}>Toggle Theme</button>
+            <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'BEER'})}>Set Beer Theme</button>
+            <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'ICECREAM'})}>Set Icecream theme</button>
+            <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'HOTDOG'})}>Set Hotdog Theme</button>
             </div>
         </header>
     )

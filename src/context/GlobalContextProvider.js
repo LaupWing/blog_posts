@@ -12,7 +12,7 @@ function reducer(state, action){
         case 'CHANGE_THEME':{
             return{
                 ...state,
-                theme: state.theme === 'icecream' ?  'dark' : 'icecream'
+                theme: action.value.toLowerCase()
             }
         }
         default: 
