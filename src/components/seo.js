@@ -32,6 +32,10 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      script={[{
+          'src': 'https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js',
+          'type':  'text/javascript'
+      }]}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
