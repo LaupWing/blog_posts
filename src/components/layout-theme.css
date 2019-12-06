@@ -24,6 +24,9 @@ body.icecream .blog_detail header{
 body.icecream .blog_detail header h1{
     color: var(--icecream-pinkish);
 }
+body.icecream .blog_content h1{
+    color: var(--icecream-pinkish);
+}
 
 /* Macha */
 body.macha{
@@ -49,7 +52,12 @@ body.macha .blog_detail header{
 body.macha .blog_detail header h1{
     color: var(--macha-darkGreen);
 }
-
+body.macha .blog_detail header h1{
+    color: var(--macha-darkGreen);
+}
+body.macha .blog_content h1{
+    color: var(--macha-brightGreen);
+}
 /* Beer */
 body.beer{
     background: var(--beer-dirtWhite);
@@ -73,4 +81,7 @@ body.beer .blog_detail header{
 }
 body.beer .blog_detail header h1{
     color: var(--beer-dirtWhite);
+}
+body.beer .blog_content h1{
+    color: var(--beer-darkOrange);
 }

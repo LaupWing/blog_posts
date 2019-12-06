@@ -191,6 +191,11 @@ main .blog_detail header{
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
+    opacity: .5;
+    transition: .5s;
+}
+main .blog_detail header:hover{
+    opacity: 1;
 }
 main .blog_detail header h1,
 main .blog_detail header h2{
@@ -207,5 +212,3 @@ main .blog_detail .blog_content{
     padding: 10px;
     box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.05);
 }
-/* Blog Content Styling 
-######################################### */
