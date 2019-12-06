@@ -6,9 +6,13 @@ body.icecream{
 body.icecream header{
     background: var(--icecream-pinkish);
 }
-body.icecream nav.menu li{
-    background: var(--icecream-pinkish);
+body.icecream nav.menu a{
     border-color: var(--icecream-pinkish);
+    color: var(--icecream-pinkish);
+}
+body.icecream nav.menu a[aria-current]{
+    background: var(--icecream-pinkish);
+    color: white;
 }
 
 
@@ -19,10 +23,15 @@ body.macha{
 body.macha header{
     background: var(--macha-brightGreen);
 }
-body.macha nav.menu li{
-    background: var(--macha-brightGreen);
+body.macha nav.menu a{
     border-color: var(--macha-brightGreen);
+    color: var(--macha-brightGreen);
 }
+body.macha nav.menu a[aria-current]{
+    background: var(--macha-brightGreen);
+    color: white;
+}
+
 
 
 /* Beer */
@@ -32,7 +41,11 @@ body.beer{
 body.beer header{
     background: var(--beer-darkOrange);
 }
-body.beer nav.menu li{
-    background: var(--beer-darkOrange);
+body.beer nav.menu a{
     border-color: var(--beer-darkOrange);
+    color:var(--beer-darkOrange);
+}
+body.beer nav.menu a[aria-current]{
+    background: var(--beer-darkOrange);
+    color: white;
 }
