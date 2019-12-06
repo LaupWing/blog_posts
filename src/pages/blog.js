@@ -18,8 +18,6 @@ const BlogPage = ({data}) => {
             <br/>
             <br/>
             <Link to={post.node.frontmatter.path}>Read more</Link>
-            <br/>
-            <br/>
         </div>
     ))}
   </Layout>

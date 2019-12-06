@@ -8,10 +8,14 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" />
         <h1>Welcome to my blog website</h1>
-        <p>On this website you can find my blogs related to coding</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <p>On this website you can find my blogs related to coding.</p>
+        <br/>
+        <p>This website is made by <a href="https://www.gatsbyjs.org/">Gatsby</a> and <a href="https://greensock.com/gsap/">Gsap</a></p>
+        <p>Gatsby is used for generating static html pages from markdown files</p>
+        <p>Gsap is used for the animations for this website</p>
+        {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
-        </div>
+        </div> */}
         {/* <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
 )

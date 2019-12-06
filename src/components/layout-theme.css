@@ -10,16 +10,20 @@ body.icecream nav.menu a{
     border-color: var(--icecream-pinkish);
     color: var(--icecream-pinkish);
 }
-body.icecream nav.menu a[aria-current]{
+body.icecream nav.menu a.active{
     background: var(--icecream-pinkish);
     color: white;
 }
 body.icecream .blog_post{
     background: var(--icecream-yellowish);
-    padding: 10px;
-    margin: 10px 0;
 }
 
+body.icecream .blog_detail header{
+    background: var(--icecream-yellowish);
+}
+body.icecream .blog_detail header h1{
+    color: var(--icecream-pinkish);
+}
 
 /* Macha */
 body.macha{
@@ -32,11 +36,13 @@ body.macha nav.menu a{
     border-color: var(--macha-brightGreen);
     color: var(--macha-brightGreen);
 }
-body.macha nav.menu a[aria-current]{
+body.macha nav.menu a.active{
     background: var(--macha-brightGreen);
     color: white;
 }
-
+body.macha .blog_post{
+    background: var(--macha-lightGreen);
+}
 
 
 /* Beer */
@@ -50,7 +56,10 @@ body.beer nav.menu a{
     border-color: var(--beer-darkOrange);
     color:var(--beer-darkOrange);
 }
-body.beer nav.menu a[aria-current]{
+body.beer nav.menu a.active{
     background: var(--beer-darkOrange);
     color: white;
+}
+body.beer .blog_post{
+    background: var(--beer-dirtBrown);
 }
