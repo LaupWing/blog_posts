@@ -1,15 +1,21 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useContext} from "react"
-import {GlobalDispatchContext,GlobalStateContext} from '../context/GlobalContextProvider'
+import {GlobalStateContext} from '../context/GlobalContextProvider'
 import MachaIcon from './icons/macha'
 import BeerIcon from './icons/beer'
 import IcecreamIcon from './icons/icecream'
 
 const Header = ({ siteTitle }) => {
-    const dispatch = useContext(GlobalDispatchContext)
     const state = useContext(GlobalStateContext)
-    
+    const checkActive = (condition)=>{
+        console.log(condition, state.theme)
+        if(state.theme === condition){
+            return 'active'
+        }
+        return null
+    }
+
     return (
         <header>
             <div className='content'>
@@ -25,13 +31,10 @@ const Header = ({ siteTitle }) => {
                     </Link>
                 </h1>
                 <div className="themes">
-                    {state.theme}
-                    <MachaIcon/>
-                    <BeerIcon/>
-                    <IcecreamIcon/>
-                    {/* <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'BEER'})}>Set Beer Theme</button> */}
-                    {/* <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'ICECREAM'})}>Set Icecream theme</button> */}
-                    <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'MACHA'})}>Set Matcha Theme</button>
+                    {/* {state.theme} */}
+                    <MachaIcon className={checkActive('macha')}/>
+                    <BeerIcon className={checkActive('beer')} />
+                    <IcecreamIcon className={checkActive('icecream')}/>
                 </div>  
             </div>
         </header>

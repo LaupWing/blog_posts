@@ -1,3 +1,6 @@
+p{
+    margin: 0;
+}
 header .content{
     width: 960px;
     margin: auto;
@@ -6,6 +9,11 @@ header .content{
     align-items: center;
     padding: 10px 0;
 }
+header .themes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 header svg{
     width: 70px;
     height: 70px;
@@ -13,6 +21,7 @@ header svg{
     border-radius: 5px;
     cursor: pointer;
     transition: .5s;
+    margin: 0 10px;
 }
 header svg:hover{
     background: rgba(255,255,255,.8);

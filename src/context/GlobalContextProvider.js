@@ -8,6 +8,7 @@ const initialState = {
 }
 
 function reducer(state, action){
+    console.log('changing theme ')
     switch(action.type){
         case 'CHANGE_THEME':{
             return{
