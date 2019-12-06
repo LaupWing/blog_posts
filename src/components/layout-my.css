@@ -37,14 +37,30 @@ header svg.active{
 /* Macha 
 -------------------*/
 header svg#macha .outline{
-    fill: var(--macha-brightGreen);
+    fill: white;
 }
+
 header svg#macha .bottom_half,
-header svg#macha .top_half{
-    fill: var(--macha-white);
-}
+header svg#macha .top_half,
 header svg#macha .leaf,
 header svg#macha .bottom{
+    fill: transparent;
+}
+
+header svg#macha.active .outline,
+header svg#macha:hover .outline{
+    fill: var(--macha-brightGreen);
+}
+header svg#macha.active .bottom_half,
+header svg#macha.active .top_half,
+header svg#macha:hover .bottom_half,
+header svg#macha:hover .top_half{
+    fill: var(--macha-white);
+}
+header svg#macha.active .leaf,
+header svg#macha.active .bottom,
+header svg#macha:hover .leaf,
+header svg#macha:hover .bottom{
     fill: var(--macha-darkGreen);
 }
 
@@ -61,15 +77,19 @@ header svg#beer .foam{
 }
 
 /* hover */
+header svg#beer.active .outline,
 header svg#beer:hover .outline{
     fill: var(--beer-darkOrange);
 }
+header svg#beer.active .middle,
 header svg#beer:hover .middle{
     fill: var(--beer-lightOrange);
 }
+header svg#beer.active .foam,
 header svg#beer:hover .foam{
     fill: var(--beer-dirtWhite);
 }
+header svg#beer.active .handle,
 header svg#beer:hover .handle{
     fill: var(--beer-dirtWhite);
 }
@@ -85,12 +105,15 @@ header svg#icecream .ice{
     fill: transparent;
 }
 
+header svg#icecream.active .ice,
 header svg#icecream:hover .ice{
     fill: var(--icecream-pinkish);
 }
+header svg#icecream.active .cone,
 header svg#icecream:hover .cone{
     fill: var(--icecream-skintone);
 }
+header svg#icecream.active .outline,
 header svg#icecream:hover .outline{
     fill: var(--icecream-yellowish);
 }
