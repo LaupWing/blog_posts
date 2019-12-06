@@ -8,12 +8,7 @@ const Header = ({ siteTitle }) => {
     const state = useContext(GlobalStateContext)
     
     return (
-        <header
-            style={{
-            background: `var(--icecream-pinkish)`,
-            marginBottom: `1.45rem`,
-            }}
-        >
+        <header>
             <div
             style={{
                 margin: `0 auto`,
@@ -35,7 +30,7 @@ const Header = ({ siteTitle }) => {
             {state.theme}
             <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'BEER'})}>Set Beer Theme</button>
             <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'ICECREAM'})}>Set Icecream theme</button>
-            <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'HOTDOG'})}>Set Hotdog Theme</button>
+            <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'MACHA'})}>Set Matcha Theme</button>
             </div>
         </header>
     )

@@ -1,3 +1,20 @@
+/* Ice cream theme */
 body.icecream{
     background: var(--icecream-skintone);
+}
+body.icecream header{
+    background: var(--icecream-pinkish);
+}
+body.macha{
+    background: var(--macha-white);
+}
+body.macha header{
+    background: var(--macha-brightGreen);
+}
+
+body.beer{
+    background: var(--beer-dirtWhite);
+}
+body.beer header{
+    background: var(--beer-darkOrange);
 }

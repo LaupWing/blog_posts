@@ -39,6 +39,7 @@ nav,
 section,
 summary {
     display: block;
+    transition: .5s;
 }
 audio,
 canvas,
