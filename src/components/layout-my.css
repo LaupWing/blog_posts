@@ -201,3 +201,11 @@ main .blog_detail header h1{
     font-size: .8rem;
     margin: 0;
 }
+
+main .blog_detail .blog_content{
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.05);
+}
+/* Blog Content Styling 
+######################################### */

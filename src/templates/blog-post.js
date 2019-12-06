@@ -18,7 +18,7 @@ export default function Template({data}){
                     <h2>{post.frontmatter.title}</h2>
                     <h2>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h2>
                 </header>
-                <div dangerouslySetInnerHTML={{__html: post.html}}/>
+                <div className='blog_content' dangerouslySetInnerHTML={{__html: post.html}}/>
             </div>
         </Layout>
     )

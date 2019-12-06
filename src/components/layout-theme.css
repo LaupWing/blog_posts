@@ -43,7 +43,12 @@ body.macha nav.menu a.active{
 body.macha .blog_post{
     background: var(--macha-lightGreen);
 }
-
+body.macha .blog_detail header{
+    background: var(--macha-lightGreen);
+}
+body.macha .blog_detail header h1{
+    color: var(--macha-darkGreen);
+}
 
 /* Beer */
 body.beer{
@@ -62,4 +67,10 @@ body.beer nav.menu a.active{
 }
 body.beer .blog_post{
     background: var(--beer-dirtBrown);
+}
+body.beer .blog_detail header{
+    background: var(--beer-dirtBrown);
+}
+body.beer .blog_detail header h1{
+    color: var(--beer-dirtWhite);
 }
