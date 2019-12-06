@@ -1,6 +1,21 @@
 p{
     margin: 0;
 }
+a{
+    color: white;
+    font-family: var(--header-font);
+    font-weight: 600;
+}
+
+/* Global transitions */
+header,
+nav,
+li{
+    transition: .5s;
+}
+
+/* header
+######################################### */
 header .content{
     width: 960px;
     margin: auto;
@@ -116,4 +131,25 @@ header svg#icecream:hover .cone{
 header svg#icecream.active .outline,
 header svg#icecream:hover .outline{
     fill: var(--icecream-yellowish);
+}
+
+/* Nav
+######################################### */
+nav.menu{
+    display: flex;
+    justify-content: center;
+}
+nav.menu li{
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    color: white;
+}
+nav.menu li:first-of-type{
+    border-radius: 0 0 0 10px;
+}
+nav.menu li:last-of-type{
+    border-radius: 0 0 10px 0;
 }
