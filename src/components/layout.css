@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('./layout-theme.css');
 @import url('./layout-my.css');
 *{
@@ -7,6 +8,7 @@
 }
 :root{
     --header-font: 'Poiret One', cursive;
+    --blog-font: 'Open Sans', sans-serif;
     --icecream-pinkish: #ff92a9;
     --icecream-yellowish: #fed361;
     --icecream-skintone: #f9ece6;
