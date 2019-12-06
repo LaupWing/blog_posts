@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React, {useContext} from "react"
 import {GlobalDispatchContext,GlobalStateContext} from '../context/GlobalContextProvider'
 import MachaIcon from './icons/macha'
+import BeerIcon from './icons/beer'
+import IcecreamIcon from './icons/icecream'
 
 const Header = ({ siteTitle }) => {
     const dispatch = useContext(GlobalDispatchContext)
@@ -25,8 +27,10 @@ const Header = ({ siteTitle }) => {
                 <div className="themes">
                     {state.theme}
                     <MachaIcon/>
-                    <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'BEER'})}>Set Beer Theme</button>
-                    <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'ICECREAM'})}>Set Icecream theme</button>
+                    <BeerIcon/>
+                    <IcecreamIcon/>
+                    {/* <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'BEER'})}>Set Beer Theme</button> */}
+                    {/* <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'ICECREAM'})}>Set Icecream theme</button> */}
                     <button onClick={()=>dispatch({type: 'CHANGE_THEME', value:'MACHA'})}>Set Matcha Theme</button>
                 </div>  
             </div>

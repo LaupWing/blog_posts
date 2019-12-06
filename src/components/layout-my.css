@@ -4,8 +4,84 @@ header .content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 header svg{
-    width: 50px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+header svg:hover{
+    background: rgba(255,255,255,.8);
+}
+header svg > path{
+    transition: 1s;
+}
+
+header svg.active{
+    background: rgba(255,255,255,.8);
+}
+
+/* Macha 
+-------------------*/
+header svg#macha .outline{
+    fill: var(--macha-brightGreen);
+}
+header svg#macha .bottom_half,
+header svg#macha .top_half{
+    fill: var(--macha-white);
+}
+header svg#macha .leaf,
+header svg#macha .bottom{
+    fill: var(--macha-darkGreen);
+}
+
+/* Beer 
+-------------------*/
+
+header svg#beer .outline{
+    fill: white;
+}
+header svg#beer .middle,
+header svg#beer .handle,
+header svg#beer .foam{
+    fill: transparent;
+}
+
+/* hover */
+header svg#beer:hover .outline{
+    fill: var(--beer-darkOrange);
+}
+header svg#beer:hover .middle{
+    fill: var(--beer-lightOrange);
+}
+header svg#beer:hover .foam{
+    fill: var(--beer-dirtWhite);
+}
+header svg#beer:hover .handle{
+    fill: var(--beer-dirtWhite);
+}
+
+/* Icecream
+-------------------*/
+
+header svg#icecream .outline{
+    fill:white;
+}
+header svg#icecream .cone,
+header svg#icecream .ice{
+    fill: transparent;
+}
+
+header svg#icecream:hover .ice{
+    fill: var(--icecream-pinkish);
+}
+header svg#icecream:hover .cone{
+    fill: var(--icecream-skintone);
+}
+header svg#icecream:hover .outline{
+    fill: var(--icecream-yellowish);
 }
