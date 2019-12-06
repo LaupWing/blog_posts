@@ -3,6 +3,7 @@
 @import url('./layout-my.css');
 *{
     box-sizing: border-box!important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 :root{
     --header-font: 'Poiret One', cursive;

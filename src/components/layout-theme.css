@@ -14,6 +14,11 @@ body.icecream nav.menu a[aria-current]{
     background: var(--icecream-pinkish);
     color: white;
 }
+body.icecream .blog_post{
+    background: var(--icecream-yellowish);
+    padding: 10px;
+    margin: 10px 0;
+}
 
 
 /* Macha */

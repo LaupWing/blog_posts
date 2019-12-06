@@ -20,7 +20,7 @@ a{
 /* header
 ######################################### */
 header .content{
-    width: 960px;
+    max-width: 960px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -162,7 +162,10 @@ nav.menu a:last-of-type{
 body nav.menu a[aria-current]{
     background: blueviolet;
 }
-
+/* Main
+######################################### */
 main{
+    margin: auto;
     margin-top: 50px;
+    max-width: 900px;
 }
