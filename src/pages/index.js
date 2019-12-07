@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import GatsbyLogo from '../components/icons/gatsby'
+import GsapLogo from '../components/icons/gsap'
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -20,6 +21,7 @@ const IndexPage = () => (
                 <h2>Powerd By:</h2>
                 <div className="logos">
                     <GatsbyLogo/>
+                    <GsapLogo/>
                 </div>
             </div>
         </div>

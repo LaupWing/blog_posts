@@ -1,4 +1,3 @@
-
 /* Ice cream theme */
 body.icecream{
     background: var(--icecream-skintone);
@@ -27,6 +26,15 @@ body.icecream .blog_detail header h1{
 body.icecream .blog_content h1{
     color: var(--icecream-pinkish);
 }
+body.icecream svg#gatsby_logo .outline{
+    fill: var(--icecream-pinkish);
+}
+body.icecream svg#gatsby_logo .middle,
+body.icecream svg#gatsby_logo .bottom{
+    fill: var(--icecream-yellowish);
+}
+
+
 
 /* Macha */
 body.macha{
@@ -58,6 +66,9 @@ body.macha .blog_detail header h1{
 body.macha .blog_content h1{
     color: var(--macha-brightGreen);
 }
+
+
+
 /* Beer */
 body.beer{
     background: var(--beer-dirtWhite);
