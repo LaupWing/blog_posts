@@ -206,6 +206,23 @@ main .blog_detail header h1{
     font-size: .8rem;
     margin: 0;
 }
+
+/* Home
+######################################### */
+main .home .powererd_by{
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+main .home .powererd_by h2{
+    text-align: center;
+    font-style: italic;
+}
+main .home .powererd_by svg{
+    width: 150px;
+}
+
+
 /* Blog
 ######################################### */
 main .blog_detail .blog_content{
