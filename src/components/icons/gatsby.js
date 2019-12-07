@@ -2,7 +2,9 @@ import React from 'react'
 import gsap from 'gsap'
 const Gatsby = () => {
     const tl = gsap.timeline({defaults:{duration:1}})
-    
+    const quitGsapAnim = () =>{
+        // tl.reverse()
+    }
     const startGsapAnim = ()=>{
         tl
             .to("#gatsby_logo", {
@@ -20,10 +22,21 @@ const Gatsby = () => {
             .to("#gatsby_logo", {
                 scaleX: 1
             },1)
+            .to("#gatsby_logo .outline", {
+                fill: "var(--icecream-pinkish)"
+            })
+            .to("#gatsby_logo .middle", {
+                fill: "var(--icecream-skintone)"
+            })
+            .to("#gatsby_logo", {
+                scaleX: 1
+            })
+            .repeat(-1)
     }
     return (
         <svg 
             onMouseOver={startGsapAnim} 
+            onMouseOut={quitGsapAnim} 
             id="gatsby_logo" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 512 512"
