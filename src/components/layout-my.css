@@ -16,6 +16,9 @@ li{
 a{
     transition: .25s;
 }
+h1{
+    text-align: center;
+}
 h1,
 h2,
 h3,
@@ -256,4 +259,8 @@ main .blog_detail .blog_content h2{
 main .blog_detail .blog_content p{
     font-size: .9rem;
     margin-bottom: 1rem;
+}
+main .blog_content img{
+    margin: auto;
+    display: block;
 }
