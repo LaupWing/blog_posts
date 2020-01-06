@@ -7,7 +7,12 @@ author: "Laup Wing"
 
 ## Table of contents
 1. [UI Elements at 60fps (Progressive Web App Summit 2016)](#ui-elements-at-60fps-progressive-web-app-summit-2016)
-2. [Watch a whole course than code](#watch-a-whole-course-than-code)
+2. [Rail](#rail)
+3. [Native App?](#native-app?)
+4. [Three Components](#three-components)
+    4. [Sidenav](#sidenav)
+    4. [Swipeable Cards](#swipeable-cards)
+    4. [Expand and Collapse view](#expand-and-collapse-view)
 
 
 # UI Elements at 60fps (Progressive Web App Summit 2016):
@@ -35,6 +40,6 @@ So which part of the rail acronym do we put the most imporance in? See the image
 
 ## Three Components
 In order to see how you can achieve this and how it is done, i have made 3 example codes with some technics (of course this is copied from the talk) 
-### SideNav
+### Sidenav
 ### Swipeable Cards
 ### Expand and Collapse view
