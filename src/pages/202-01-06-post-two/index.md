@@ -40,6 +40,21 @@ So which part of the rail acronym do we put the most imporance in? See the image
 
 ## Three Components
 In order to see how you can achieve this and how it is done, i have made 3 example codes with some technics (of course this is copied from the talk) 
+
 ### Sidenav
+During this part of the talk the presentator use some important terms to know. See below:
+
+**Primed Elements:** Elements that you have ready to go. When a user clicks on the button to open the sidenav the user expects the sidenav to just pop up.
+*   It could be activated at any time
+*   Toggling its visibility would take > 100ms (if it takes longer than that it feels laggy)
+**Layer Promotion:** Seperate out an element from the page. So when pained it or move it, it wont affect any element onthe page the page. The easies way to create this layer (which is called composited layer) is by using the `will-change: transform` property in your css. 
+*   **But dont promote everything! Why?**
+    *   **Keep your memory usage down**: If you create layers you are going to use memory
+    *   **Keep time spent in compositing to a minimum**: Compositing is taking all the layers and squishe it in together and put the pixels on the screen. If you have alot of layers it will cost a lot of energy for the browser.
+
+Below you can see the sidenav and the use of `will-change` to achieve the smooth 60fps;
+
+https://codepen.io/laupwing/pen/yLypxwW
+
 ### Swipeable Cards
 ### Expand and Collapse view

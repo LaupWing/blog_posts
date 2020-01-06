@@ -6,7 +6,13 @@ a{
     font-family: var(--header-font);
     font-weight: 600;
 }
-
+li{
+    list-style: disc;
+}
+ul ul li,
+ol ol li{
+    list-style: circle;
+}
 /* Global transitions */
 header,
 nav,
