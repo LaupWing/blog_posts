@@ -62,6 +62,7 @@ What we want to do here is decouple the input from the actual rendering and draw
 
 Generally speaking its bad to add touch events to the document, because it blocks scrolling behaviors. The way around this is by padding `{passive: true}` to the event function as third parameter.
 
+_**Note:** During this component i was very lazy, so i just copy pasted the content from their github_
 https://codepen.io/laupwing/pen/rNapQzJ?editors=0010#0
 
 ### Expand and Collapse view
