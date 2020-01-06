@@ -9,7 +9,10 @@ author: "Laup Wing"
 ## Table of contents
 1. [A Little bit about myself](#a-little-bit-about-myself)
 2. [Watch a whole course than code](#watch-a-whole-course-than-code)
-2. [Writing down code](#writing-down-code)
+3. [Writing down code](#writing-down-code)
+4. [Coding along](#coding-along)
+5. [Own projects](#own-projects)
+6. [Summary](#summary)
 
 ## A Little bit about myself
 Recently i have made a big switch from being unproductive and uninterested in learning code to someone who strive to learn something new about coding everyday. I am a person with extreme ends. If i want to be lazy, i will make sure i am the laziest person ever, but on the flipside if i want to learn something i will do everything in my power to do it and so efficient as possible. So here began my journey to learn code and trying to find the best possible way to learn it efficient.

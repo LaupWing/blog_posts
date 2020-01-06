@@ -1,7 +1,7 @@
 ---
 path: "/blog/post-one"
 date: "2019-11-05"
-title: "My first Gatsby Post: Testing Blog"
+title: "Testing Blog: Blog pure for testing features"
 author: "Laup Wing"
 ---
 
