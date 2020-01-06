@@ -26,5 +26,15 @@ For the first 5 min of this talk the presentator talks about rail. When you thin
 ## Native App?
 Users dont care about if an app is an progressive web app or a native app. The user cares about the app behave like an app. And with behave you can think about performance and interaction. Does the app perform well and does it do the things you want it to do (interaction).
 
-So which part of the rail acronym do we put the most imporance in? 
-![alt text](http://via.placeholder.com/640x360)
+So which part of the rail acronym do we put the most imporance in? See the image below.
+![alt text](https://github.com/LaupWing/blog_posts/blob/master/src/images/rail.png?raw=true)
+*   **R**esponse: Has to be instance
+*   **A**nimation: The animation has to be smooth, like instant transitions
+*   **I**dle: We have some methods in our arsenal to do things while the user isnt interacting(like request animation).
+*   **L**oad: This becomes less important if you have serviceworkers to cache your site.
+
+## Three Components
+In order to see how you can achieve this and how it is done, i have made 3 example codes with some technics (of course this is copied from the talk) 
+### SideNav
+### Swipeable Cards
+### Expand and Collapse view
