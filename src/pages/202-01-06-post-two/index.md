@@ -57,4 +57,11 @@ Below you can see the sidenav and the use of `will-change` to achieve the smooth
 https://codepen.io/laupwing/pen/yLypxwW
 
 ### Swipeable Cards
+With this component you dont want to promote layers ahead of time, because they are alot of cards which drives the performance down.
+What we want to do here is decouple the input from the actual rendering and drawing bit. You want the animation to keep going even when the users isnt doing anything. The way we do that is by request animation frame for each interaction.
+
+Generally speaking its bad to add touch events to the document, because it blocks scrolling behaviors. The way around this is by padding `{passive: true}` to the event function as third parameter.
+
+https://codepen.io/laupwing/pen/rNapQzJ?editors=0010#0
+
 ### Expand and Collapse view
