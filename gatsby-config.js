@@ -24,7 +24,23 @@ module.exports = {
     {
         resolve: `gatsby-transformer-remark`,
         options:{
-            plugins:[`gatsby-remark-autolink-headers`]
+            plugins:[
+                `gatsby-remark-autolink-headers`,
+                {
+                    resolve: "gatsby-remark-embed-youtube",
+                    options: {
+                        width: '90%',
+                        height: 400,
+                    }
+                },
+                {
+                    resolve:"@weknow/gatsby-remark-codepen",
+                    options: {
+                      theme: "dark",
+                      height: 400
+                    }
+                }
+            ]
         }
     },
     `gatsby-transformer-sharp`,

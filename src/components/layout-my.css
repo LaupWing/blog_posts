@@ -25,6 +25,10 @@ h3,
 h4{
     font-family: var(--header-font);
 }
+iframe{
+    display: block;
+    margin: auto;
+}
 /* header
 ######################################### */
 header .content{

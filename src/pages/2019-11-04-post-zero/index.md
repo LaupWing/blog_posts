@@ -1,7 +1,7 @@
 ---
 path: "/blog/post-zero"
 date: "2019-11-06"
-title: "Best Way to learn code"
+title: "Article 1: Best Way to learn code"
 author: "Laup Wing"
 ---
 
