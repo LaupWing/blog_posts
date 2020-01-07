@@ -53,6 +53,7 @@ During this part of the talk the presentator use some important terms to know. S
     *   **Keep time spent in compositing to a minimum**: Compositing is taking all the layers and squishe it in together and put the pixels on the screen. If you have alot of layers it will cost a lot of energy for the browser.
 
 Below you can see the sidenav and the use of `will-change` to achieve the smooth 60fps;
+The code is not complicated at all it is only a `click` event listener listening to opening the nav by adding a class and removing the class to remove the navbar from sight.
 
 https://codepen.io/laupwing/pen/yLypxwW
 
@@ -62,7 +63,133 @@ What we want to do here is decouple the input from the actual rendering and draw
 
 Generally speaking its bad to add touch events to the document, because it blocks scrolling behaviors. The way around this is by padding `{passive: true}` to the event function as third parameter.
 
-_**Note:** During this component i was very lazy, so i just copy pasted the content from their github_
+_**Note:** During this component i was very lazy, so i just copy pasted the content from their github [click here for githublink](), but i tried my best to understand the code that has been written_
+
+One of the important parts of this code is the `requestAnimationFrame` method. Which is an build in browser method. The `requestAnimationFrame` is basically an method that tells the browser to perform an animation and requests a specified function to update an animation before the next repaint(frame). [See more on MDN](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+
+Because there are many animated cards in this design it is not smart to define the `will-change` beforehand but only when the user performans an action. Thats why this css method will only be applied on events. The function belows starts whenever a user touch the card or clicks on a card. As you can see the `will-change` is only applied when the user performans an action 
+
+```javascript{numberLines: true}
+ onStart (evt) {
+    if (this.target)
+      return;
+
+    if (!evt.target.classList.contains('card'))
+      return;
+
+    this.target = evt.target;
+    this.targetBCR = this.target.getBoundingClientRect();
+
+    this.startX = evt.pageX || evt.touches[0].pageX;
+    this.currentX = this.startX;
+
+    this.draggingCard = true;
+    this.target.style.willChange = 'transform'; // <--- here
+
+    evt.preventDefault();
+  }
+```
+
+When the user Move the card this funtion below will start. The function sets up currentX value
+```js
+onMove (evt) {
+    if (!this.target)
+      return;
+
+    this.currentX = evt.pageX || evt.touches[0].pageX;
+}
+```
+
+Everytime the `requestAnimationFrame` is triggerd the update fuction will start. The update function sets up the translateX values and the opacity value. With the use of the opacity the function determines if the card has to snap back to its original postion or to remove it from the nodelist. If the card is removed from the DOM the other card elements will snap to the top, which is not what we want. What we want is that it will transtion to the top with the help of transform. 
+```js
+ update () {
+    requestAnimationFrame(this.update);
+
+    if (!this.target)
+      return;
+
+    if (this.draggingCard) {
+      this.screenX = this.currentX - this.startX;
+    } else {
+      this.screenX += (this.targetX - this.screenX) / 4;
+    }
+
+    const normalizedDragDistance =
+        (Math.abs(this.screenX) / this.targetBCR.width);
+    const opacity = 1 - Math.pow(normalizedDragDistance, 3);
+
+    this.target.style.transform = `translateX(${this.screenX}px)`;
+    this.target.style.opacity = opacity;
+
+    // User has finished dragging.
+    if (this.draggingCard)
+      return;
+
+    const isNearlyAtStart = (Math.abs(this.screenX) < 0.1);
+    const isNearlyInvisible = (opacity < 0.01);
+
+    // If the card is nearly gone.
+    if (isNearlyInvisible) {
+
+      // Bail if there's no target or it's not attached to a parent anymore.
+      if (!this.target || !this.target.parentNode)
+        return;
+
+      this.target.parentNode.removeChild(this.target);
+
+      const targetIndex = this.cards.indexOf(this.target);
+      this.cards.splice(targetIndex, 1);
+
+      // Slide all the other cards.
+      this.animateOtherCardsIntoPosition(targetIndex);
+
+    } else if (isNearlyAtStart) {
+      this.resetTarget();
+    }
+  }
+```
+
+This function below handles the other cards to animate to a new position. The main purpose is to add a translateY value to the cards below the deleted card (the cardsbelow is calculated through the startIndex parameter). After the translateY value has been added the transtion css property and deletes the transform, which result in an vertical transition. After this transition all the style property's will be deletend and resetted.
+
+```js
+animateOtherCardsIntoPosition (startIndex) {
+    // If removed card was the last one, there is nothing to animate.
+    // Remove the target.
+    if (startIndex === this.cards.length) {
+      this.resetTarget();
+      return;
+    }
+
+    const onAnimationComplete = evt => {
+      const card = evt.target;
+      card.removeEventListener('transitionend', onAnimationComplete);
+      card.style.transition = '';
+      card.style.transform = '';
+
+      this.resetTarget();
+    };
+
+    // Set up all the card animations.
+    for (let i = startIndex; i < this.cards.length; i++) {
+      const card = this.cards[i];
+
+      // Move the card down then slide it up.
+      card.style.transform = `translateY(${this.targetBCR.height + 20}px)`;
+      card.addEventListener('transitionend', onAnimationComplete);
+    }
+
+    // Now init them.
+    requestAnimationFrame(_ => {
+      for (let i = startIndex; i < this.cards.length; i++) {
+        const card = this.cards[i];
+
+        // Move the card down then slide it up, with delay according to "distance"
+        card.style.transition = `transform 150ms cubic-bezier(0,0,0.31,1) ${i*50}ms`;
+        card.style.transform = '';
+      }
+    });
+  }
+```
 https://codepen.io/laupwing/pen/rNapQzJ?editors=0010#0
 
 ### Expand and Collapse view
