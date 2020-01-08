@@ -99,7 +99,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 </details>
 
 ## Table of contents
-1. [What is Gatsby](#1-what-is-gatsby?)
+1. [What is Gatsby](#1-what-is-gatsby)
 2. [Intro](#2-intro)
 
 ## 1. What is Gatsby?
@@ -108,10 +108,17 @@ Gatsby is an framework that creates static HTML files with the addition bonus th
 ## 2. Intro
 So I used Gatsby to generate HTML webpages with Markdown files. This site is mainly used for deploying my articles for the minor web development.
 
-
 **_Click Image below for the Live Demo_**
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Click me to see the site" src="https://github.com/LaupWing/blog_posts/blob/master/src/images/homepage.PNG?raw=true" width="100%" />
   </a>
 </p>
+
+## 3. Log
+In this section you can find what i have done (the log) for this project
+### 3.1 Week 1
+#### 3.1.1 Summary
+I began learning gatsby by following a [tutorial by Brad Traversy](https://www.youtube.com/watch?v=6YhqQ2ZW1sc&t=3233s) on Youtube. Prior to this tutorial i had almost no knowledge about GraphQL and some knowledge about React. During this tutorial i understood almost nothing about the GraphQL part. The instructor (Brad) didn't explain alot about GraphQL, because it wasn't a GraphQL tutorial but a Gatsby. So after this tutorail i didn't and still don't understand almost 30% of this tutorial, but that is mainly because of GraphQL. After finishing this tutorial i went on my own and tried to create my blog website. I also wanted to implement a new techonlogy called gsap for my animation, and add react states (actually hooks) to implement some theme switching.
+#### 3.1.2 Code Explaination
+#### 3.1.1 Sourcelist
