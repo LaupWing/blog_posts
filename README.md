@@ -14,6 +14,12 @@ Gatsby is an framework that creates static HTML files with the addition bonus th
 
 So I used Gatsby to generate HTML webpages with Markdown.
 
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Click me to see the site" src="https://github.com/LaupWing/blog_posts/blob/master/src/images/homepage.PNG?raw=true" width="100%" />
+  </a>
+</p>
+
 <details>
 <summary>I have left the default Gatsby README here. So click here to see that.</summary>
 
