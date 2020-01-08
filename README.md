@@ -12,6 +12,8 @@
 ## 😕 What it is?
 Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
 
+So I used Gatsby to generate HTML webpages with Markdown.
+
 <details>
 <summary>I have left the default Gatsby README here. So click here to see that.</summary>
 
