@@ -9,17 +9,6 @@
 </h1>
 
 # Gatsby
-## 😕 What it is?
-Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
-
-So I used Gatsby to generate HTML webpages with Markdown.
-
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Click me to see the site" src="https://github.com/LaupWing/blog_posts/blob/master/src/images/homepage.PNG?raw=true" width="100%" />
-  </a>
-</p>
-
 <details>
 <summary>I have left the default Gatsby README here. So click here to see that.</summary>
 
@@ -108,3 +97,30 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 </details>
+
+## 😕 What is Gatsby?
+Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
+
+## Intro
+So I used Gatsby to generate HTML webpages with Markdown files. This site is mainly used for deploying my articles for the minor web development.
+
+
+**_Click Image below for the Live Demo_**
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Click me to see the site" src="https://github.com/LaupWing/blog_posts/blob/master/src/images/homepage.PNG?raw=true" width="100%" />
+  </a>
+</p>
+
+## Table of contents
+1. [Live demo](#1-Live-demo)
+2. [Install](#2-Install)
+3. [Features](#3-Features)
+4. [API](#4-API)
+5. [Actor Diagram](#5-Actor-Diagram)
+6. [Interaction](#6-Interaction)
+7. [Code examples](#7-Code-examples)
+    1. [Router](#71-Router)
+    2. [Components](#72-Components)
+8. [Design decisions](#8-Design-decisions)
+9. [To-do](#9-To-do)
