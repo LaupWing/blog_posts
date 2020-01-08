@@ -8,11 +8,12 @@
   Gatsby: MD blogpost site
 </h1>
 
-# 😕 Gatsby
-## WHat it is?
+# Gatsby
+## 😕 What it is?
+Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
 
 <details>
-<summary>Gatsby Default README content</summary>
+<summary>I have left the default Gatsby README here. So click here to see that.</summary>
 
 ## 🚀 Quick start
 
