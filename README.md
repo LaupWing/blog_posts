@@ -128,5 +128,38 @@ I began learning gatsby by following a [tutorial by Brad Traversy](https://www.y
 
 **Theme Switching**
 ![Theme switching](https://github.com/LaupWing/blog_posts/blob/master/src/images/reactstates.gif?raw=true)
+**Failed gsap animation**
+![Failed gsap animation](https://github.com/LaupWing/blog_posts/blob/master/src/images/gsap.gif?raw=true)
 #### 3.1.2 Code Explaination
+##### Config
+In the `gatsby-config.js` file you can find the configuration of gatsby. Configuration like plugins sitemetadata and where gatsby can find the MD files to generate the static HTML are configured here.
+```js
+module.exports = {
+  siteMetadata: {
+    title: `My Blogs`,
+    description: `A blog post like website, where i host my school articles`,
+    author: `@LaupWing`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+...
+```
 #### 3.1.3 Sourcelist
+*   [Gatsby Tutorial by Brad Traversy](https://www.youtube.com/watch?v=6YhqQ2ZW1sc&t=3233s)
+*   [Gatsby States Tutorial by Code Bushi](https://www.youtube.com/watch?v=ThCfN5WJ0cU)
+*   [Gsap Tutorial by Coursetro](https://www.youtube.com/watch?v=YqOhQWbouCE&t=1112s)
