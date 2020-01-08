@@ -98,10 +98,14 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 </details>
 
-## 😕 What is Gatsby?
+## Table of contents
+1. [What is Gatsby](#1-what-is-gatsby?)
+2. [Intro](#2-intro)
+
+## 1. What is Gatsby?
 Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
 
-## Intro
+## 2. Intro
 So I used Gatsby to generate HTML webpages with Markdown files. This site is mainly used for deploying my articles for the minor web development.
 
 
@@ -111,16 +115,3 @@ So I used Gatsby to generate HTML webpages with Markdown files. This site is mai
     <img alt="Click me to see the site" src="https://github.com/LaupWing/blog_posts/blob/master/src/images/homepage.PNG?raw=true" width="100%" />
   </a>
 </p>
-
-## Table of contents
-1. [Live demo](#1-Live-demo)
-2. [Install](#2-Install)
-3. [Features](#3-Features)
-4. [API](#4-API)
-5. [Actor Diagram](#5-Actor-Diagram)
-6. [Interaction](#6-Interaction)
-7. [Code examples](#7-Code-examples)
-    1. [Router](#71-Router)
-    2. [Components](#72-Components)
-8. [Design decisions](#8-Design-decisions)
-9. [To-do](#9-To-do)
