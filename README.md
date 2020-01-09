@@ -159,6 +159,77 @@ module.exports = {
     },
 ...
 ```
+##### MD files
+Before i explain how the MD files are connected to the React templates, i will show you how the MD files looks like so that you will have a better feeling about how React (or rather GraphQL) handles the MD file.
+
+If  you look at the MD file below the first thing that you notice is the header section with some kind of metadata. Well this part of the markdown file is the most (and only) important part of the whole MD document. The `path` property's tells gatsby which path this MD file will be located. The rest of the property's are used just to show the user some metadata.
+
+```markdown
+---
+path: "/blog/post-one"
+date: "2019-11-05"
+title: "Testing Blog: Blog pure for testing features"
+author: "Laup Wing"
+---
+# My first Gatsby
+
+TESTTTT
+
+# Look at this Video:
+ 
+`youtube:https://www.youtube.com/embed/2Xc9gXyf2G4`
+
+# Pen example:
+ 
+https://codepen.io/laupwing/pen/gNpLXy
+```
+
+##### Gatsby Creating Page 
+One of the default files when creating a default Gatsby project file is the `gatsby-node.js` file. This file is the main file which transforms the MD files to static HTML/React files. 
+
+Basically what is happening here is that we export an arrow function with as parameter an object with the properties acitons and graphql. Inside this arrow function we first piont to path of our template to say which template we want Gatsby to generate our MD files from. 
+
+After that we returned an grapql query to the MD files and receive the propties in the formatter object which is: title, path, date, and the author. When we received these information we createPage with this information from graphql.
+```js
+const path  = require('path')
+
+exports.createPages = ({actions, graphql})=>{
+    const { createPage } = actions
+
+    const postTemplate = path.resolve('src/templates/blog-post.js')
+
+    return graphql(`
+        {
+            allMarkdownRemark{
+                edges{
+                node{
+                    html
+                    id
+                    frontmatter {
+                        title
+                        path
+                        date
+                        author
+                    }
+                }
+                }
+            }
+        }
+    `).then(res=>{
+        if(res.errors){
+            return Promise.reject(res.errors)
+        }
+        res.data.allMarkdownRemark.edges.forEach(({node})=>{
+            console.log(node)
+            createPage({
+                path: node.frontmatter.path,
+                component: postTemplate
+            })
+        })
+    })
+}
+```
+
 #### 3.1.3 Sourcelist
 *   [Gatsby Tutorial by Brad Traversy](https://www.youtube.com/watch?v=6YhqQ2ZW1sc&t=3233s)
 *   [Gatsby States Tutorial by Code Bushi](https://www.youtube.com/watch?v=ThCfN5WJ0cU)
