@@ -189,7 +189,9 @@ One of the default files when creating a default Gatsby project file is the `gat
 
 Basically what is happening here is that we export an arrow function with as parameter an object with the properties acitons and graphql. Inside this arrow function we first piont to path of our template to say which template we want Gatsby to generate our MD files from. 
 
-After that we returned an grapql query to the MD files and receive the propties in the formatter object which is: title, path, date, and the author. When we received these information we createPage with this information from graphql.
+After that we returned an grapql query to the MD files and receive the propties in the formatter object which is: title, path, date, and the author. When we received these information we createPage with this information from graphql. 
+
+**_Note: I still dont understand alot of graphql my biggest question how graphql knows where to look for these files and how it is proccesed, but unfortunate its not included in the tutorial. GraphQL is an tutorial worht on its own._**
 ```js
 const path  = require('path')
 
