@@ -255,12 +255,63 @@ So in short what i needed to do is add these things to the plugin list of gatsby
 **Codepen integration**
 ![Codepen integration](https://github.com/LaupWing/blog_posts/blob/master/src/images/codepen.gif?raw=true)
 **Unicode support**
-![Unicode support](https://github.com/LaupWing/blog_posts/blob/master/src/images/codepen.gif?raw=true)
+![Unicode support](https://github.com/LaupWing/blog_posts/blob/master/src/images/unicode.PNG?raw=true)
 **Youtube Embed**
 ![Youtube Embed](https://github.com/LaupWing/blog_posts/blob/master/src/images/youtube.gif?raw=true)
 **Code highlighting**
 ![Unicode support](https://github.com/LaupWing/blog_posts/blob/master/src/images/codehiglight.PNG?raw=true)
 
+#### 3.2.2 Code explaination
+Basically every plugin works the same but with diffrent configurations. The plugins of gatsby can be find in the `gatsby-config.js` file. All of the plugins above are placed in the plugins of `gatsby-transformer-remark`. The reason for this is because this gatsby plugin handles the parsing of markdownfiles.
+
+Below you can see a snippet of the config file. To see all the whole file [click here](https://github.com/LaupWing/blog_posts/blob/master/gatsby-config.js)
+```js
+module.exports = {
+  siteMetadata: {
+    title: `My Blogs`,
+    description: `A blog post like website, where i host my school articles`,
+    author: `@LaupWing`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+        resolve: `gatsby-transformer-remark`,
+        options:{
+            plugins:[
+                `gatsby-remark-emoji-unicode`,
+                `gatsby-remark-autolink-headers`,
+                {
+                    resolve: "gatsby-remark-embed-youtube",
+                    options: {
+                        width: '90%',
+                        height: 400,
+                    }
+                },
+                {
+                    resolve:"@weknow/gatsby-remark-codepen",
+                    options: {
+                      theme: "dark",
+                      height: 400
+                    }
+                },
+...
+```
 
 #### 3.2.3 Sourcelist
 *   [gatsby-remark-codepen](https://github.com/octahedroid/gatsby-remark-codepen)
