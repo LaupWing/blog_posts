@@ -106,9 +106,39 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
         1. [Summary](#311-summary)
         2. [Code Explaination](#312-code-explaination)
         3. [Sourcelist](#313-sourcelist)
+    2. [Week 2](#32-week-2)
+        1. [Summary](#321-summary)
+        1. [Code Explaination](#322-code-explaination)
+        1. [SourceList](#323-sourcelist)
 
 ## 1. What is Gatsby?
 Gatsby is an framework that creates static HTML files with the addition bonus that it every site is leveraging the latest web technologies such as **React** and **GraphQL**.
+
+### 1.1 How to install
+```bash
+git clone this repo
+
+npm install 
+
+gatsby develop
+```
+### 1.2 How to add a blog
+1.  Add a new directory in the `pages` directory
+2.  Give this directory a name (preferably a date)
+3.  Add a new md file in this directory
+4.  Add the following above the md file
+    ```md
+
+    ---
+    path: "/blog/post-one"
+    date: "2019-11-05"
+    title: "Testing Blog: Blog pure for testing features"
+    author: "Laup Wing"
+    ---
+
+    ```
+    The order doesnt matter, but you need every meta data of above.
+5. Write plain markdown!
 
 ## 2. Intro
 So I used Gatsby to generate HTML webpages with Markdown files. This site is mainly used for deploying my articles for the minor web development.
