@@ -236,3 +236,13 @@ exports.createPages = ({actions, graphql})=>{
 *   [Gatsby Tutorial by Brad Traversy](https://www.youtube.com/watch?v=6YhqQ2ZW1sc&t=3233s)
 *   [Gatsby States Tutorial by Code Bushi](https://www.youtube.com/watch?v=ThCfN5WJ0cU)
 *   [Gsap Tutorial by Coursetro](https://www.youtube.com/watch?v=YqOhQWbouCE&t=1112s)
+
+### 3.2 Week 2
+
+#### 3.2.1 Summary 
+
+During week 2 i was finished with the core functional of this project. I only needed to add some extra funtional to the Markdown website generating. Like the skip to heading links, codepen integration, and unicode emotes support. 
+So in short what i needed to do is add these things to the plugin list of gatsby:
+- [ ] Skip Headings  
+- [ ] Codepen integration  
+- [ ] Unicode support  

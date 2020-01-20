@@ -22,7 +22,7 @@ But how does one find the best way of learning code efficient? By trying bunch o
 ## Watch a whole course than code
 My learning journey began with a lot of watching video's related to coding (mainly tutorials). I learned code simply watching tutorial for hours on end. Sometimes i would a tutorial watch for 5 hours straight. Usually i would start coding after i finished a tutorial. What i found out is that is the most unefficient way of learning ever. Always after the tutorial i forgot everything what i have watched. This is by far the most uneffecient way of learning
 
-~~first watching tutorials than coding~~
+:x: **First watching tutorials than coding**
 
 ## Writing down code
 After this experience i have learned to write down the stuff that i learned from the tutorial. So what did i do as a extreme person? Well i wrote every single single line of code down so that i will not forget what i had learned. Im not joking, I litteraly wrote every line of code of the tutorials i was watching for one week straight. Dont believe me watch these images below and cringe.
@@ -31,17 +31,17 @@ After this experience i have learned to write down the stuff that i learned from
 
 Because i wrote every single line of code and simultaneously learning the syntaxes it took over 2  hours to finish a tutorial of 20min in length. This way of learning was better than the first, because i actually was remembering stuff, but at the same time this was not fun to do which leads inconsistency. 
 
-:x: writing every line of code
+:x: **Writing every line of code**
 
 ## Coding along
 The next method was pausing the tutorial everytime i need to code along with the instructor. This method was the best method until now. It allows me to think with the instructor and understand the choices that the instructor mades. It forces my brain to think with the instructor and shifted my brain from learing the syntaxes to understanding the diffrent problem solving technics.
 
-:heavy_check_mark: coding along
+:heavy_check_mark: **Coding along**
 
 ## Own projects
 After my first succeful method i tried out another method which is making my own version of the project that i have created during the tutorial. Combing this method with the **Coding along** method is in my opinion the best method for learning to code. By first shallowly understanding the instructors choices and methods used in a certain project and than making your own projects based on the tutorial it forces me to use my newly found knowledge it on my own. By making my own projects based on the tutorial it switches my brain from shallowly understanding the coding concepts to deeply understanding it. An added bonus by using this technik is that you can use certain parts of the code for your own projects, because you know exactly how the code works.
 
-:tada:
+:heavy_check_mark: **Own Projects** && **Coding along** 
 
 ## Summary
 What i have learned from all these technics of learning code is that you have to find a way of learning that is fun and that you can actually stick with every day. If you dont like it than constistency is not there which is THE single most important ingredient. 
