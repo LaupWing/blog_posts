@@ -241,15 +241,26 @@ exports.createPages = ({actions, graphql})=>{
 
 #### 3.2.1 Summary 
 
-During week 2 i was finished with the core functional of this project. I only needed to add some extra funtional to the Markdown website generating. Like the skip to heading links, codepen integration, code higlighting, and unicode emotes support. 
+During week 2 i was finished with the core functional of this project. I only needed to add some extra funtional to the Markdown website generating. Like the skip to heading links, codepen integration, code higlighting, youtube embed, and unicode emotes support. 
 So in short what i needed to do is add these things to the plugin list of gatsby:
 
 * Skip Headings  
 * Codepen integration  
 * Unicode support  
+* Youtube Embed  
 * Code highlighting
 
 **Skip Headings**
+![Skip Headings](https://github.com/LaupWing/blog_posts/blob/master/src/images/skipheadings.gif?raw=true)
+**Codepen integration**
+![Codepen integration](https://github.com/LaupWing/blog_posts/blob/master/src/images/codepen.gif?raw=true)
+**Unicode support**
+![Unicode support](https://github.com/LaupWing/blog_posts/blob/master/src/images/codepen.gif?raw=true)
+**Youtube Embed**
+![Youtube Embed](https://github.com/LaupWing/blog_posts/blob/master/src/images/youtube.gif?raw=true)
+**Code highlighting**
+![Unicode support](https://github.com/LaupWing/blog_posts/blob/master/src/images/codehiglight.PNG?raw=true)
+
 
 #### 3.2.3 Sourcelist
 *   [gatsby-remark-codepen](https://github.com/octahedroid/gatsby-remark-codepen)
