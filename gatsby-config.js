@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +26,7 @@ module.exports = {
         resolve: `gatsby-transformer-remark`,
         options:{
             plugins:[
+                `gatsby-remark-emoji-unicode`,
                 `gatsby-remark-autolink-headers`,
                 {
                     resolve: "gatsby-remark-embed-youtube",
