@@ -31,7 +31,7 @@ For the first 5 min of this talk the presentator talks about rail. When you thin
 *   **L**oad: Keep the user on the strain of thoughts by responding within 1s (you can think of laoding a page). (1s) 
  
 ## Native App?
-Users dont care about if an app is an progressive web app or a native app. The user cares about the app behave like an app. And with behave you can think about performance and interaction. Does the app perform well and does it do the things you want it to do (interaction).
+Users dont care about if an app is an progressive web app or an native app. The user cares about the app behave like an app. And with behave you can think about performance and interaction. Does the app perform well and does it do the things you want it to do (interaction).
 
 So which part of the rail acronym do we put the most imporance in? See the image below.
 ![alt text](https://github.com/LaupWing/blog_posts/blob/master/src/images/rail.png?raw=true)
@@ -44,7 +44,7 @@ So which part of the rail acronym do we put the most imporance in? See the image
 In order to see how you can achieve this and how it is done, there are 3 example codes with some technics (of course this is copied from the talk). Each of these component has its own problem and diffulties related to performance. In these Components i will describe what the problems are and how it could be fixed. 
 
 ### Sidenav
-During this part of the talk the presentator use some important terms to know. See below:
+During this part of the talk the presentator uses some important terms. See below:
 
 **Primed Elements:** Elements that you have ready to go. When a user clicks on the button to open the sidenav the user expects the sidenav to just pop up.
 *   It could be activated at any time
@@ -52,7 +52,7 @@ During this part of the talk the presentator use some important terms to know. S
 **Layer Promotion:** Seperate out an element from the page. So when pained it or move it, it wont affect any element onthe page the page. The easies way to create this layer (which is called composited layer) is by using the `will-change: transform` property in your css. 
 *   **But dont promote everything! Why?**
     *   **Keep your memory usage down**: If you create layers you are going to use memory
-    *   **Keep time spent in compositing to a minimum**: Compositing is taking all the layers and squishe it in together and put the pixels on the screen. If you have alot of layers it will cost a lot of energy for the browser.
+    *   **Keep time spent in compositing to an minimum**: Compositing is taking all the layers and squishe it in together and put the pixels on the screen. If you have alot of layers it will cost lots of energy for the browser.
 
 Below you can see the sidenav and the use of `will-change` to achieve the smooth 60fps;
 The code is not complicated at all it is only a `click` event listener listening to opening the nav by adding a class and removing the class to remove the navbar from sight.
@@ -61,10 +61,10 @@ https://codepen.io/laupwing/pen/yLypxwW
 
 ### Swipeable Cards
 In this component the user can swipe the cards out of the interface so that it will be deleted from the DOM. 
-With this component you dont want to promote layers ahead of time, because they are alot of cards which drives the performance down.
+With this component you dont want to promote layers ahead of time, because there are alots of cards which drives the performance down.
 What we want to do here is decouple the input from the actual rendering and drawing bit. You want the animation to keep going even when the users isnt doing anything. The way we do that is by request animation frame for each interaction.
 
-Generally speaking its bad to add touch events to the document, because it blocks scrolling behaviors. The way around this is by padding `{passive: true}` to the event function as third parameter.
+Generally speaking its bad to add touch events to the document, because it blocks scrolling behaviors. The way around this is by adding `{passive: true}` to the event function as third parameter.
 
 _**Note:** During this component i was very lazy, so i just copy pasted the content from their github [click here for githublink](), but i tried my best to understand the code that has been written_
 
@@ -205,7 +205,7 @@ The presentator shows during this component a genius solition which he called FL
 
 But when you go from first to last, it will trigger Styles and Layout. Which is typically not what you want, but if you remembered RAILS it saids that you have 1/10 of a second to respond. And we can do a styles and layout in that amount of time, but only do it once!.
 
-So the presentator explains that he sets up the final transform(expaned version) first and scales it down. So if the use clicks on the item it will set the `transform` to `null` to give it the effect of scaling up, while what actually happends is reverse!.
+So the presentator explains that he sets up the final transform(expaned version) first and scales it down. So if the user clicks on the item it will set the `transform` to `null` to give it the effect of scaling up, while what actually happends is reverse!.
 
 Things to pay attention with using this techique.
 *   Scales change child elements; you may need to use siblings
